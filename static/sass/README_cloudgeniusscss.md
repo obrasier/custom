@@ -185,12 +185,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-//$homepage-bg-image: url('../themes/cloudgenius/static/images/sunrise.jpg');
+$homepage-bg-image: url('https://raw.githubusercontent.com/beacloudgenius/cloudgenius/master/static/images/sunrise.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-//$video-thumb-url: '../themes/cloudgenius/static/images/edx.png';
+$video-thumb-url: 'https://raw.githubusercontent.com/beacloudgenius/cloudgenius/master/static/images/edx.png';
 
 //-----------------
 //  Mixin Styles
