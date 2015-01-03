@@ -1,3 +1,19 @@
+Add the following lines to /edx/app/edx_ansible/server-vars.yml
+
+cd /edx/app/edx_ansible
+
+    edxapp_use_custom_theme: true
+    edxapp_theme_name: 'cloudgenius'
+    edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
+    edxapp_theme_version: 'HEAD'
+
+Re-run the provisioning scripts:
+
+    sudo /edx/bin/update edx-platform release    
+
+read more https://github.com/edx/edx-platform/wiki/Stanford-Theming 
+
+
 Overview
 ========
 This directory stores a default theme for an Open edX instance.
