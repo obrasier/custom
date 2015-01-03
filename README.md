@@ -7,6 +7,21 @@ cd /edx/app/edx_ansible
     edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
     edxapp_theme_version: 'HEAD'
 
+Make sure to keep file permissions for server-vars.yml assigned to edx-ansible:edx-ansible
+
+	sudo chmod edx-ansible:edx-ansible /edx/app/edx_ansible/server-vars.yml
+	
+Compile assets manually
+
+To compile javascript and css outside of the update script run the following commands:
+
+	sudo -H -u edxapp bash
+	source /edx/app/edxapp/edxapp_env
+	cd /edx/app/edxapp/edx-platform
+	paver update_assets cms --settings=aws
+	paver update_assets lms --settings=aws
+
+
 Re-run the provisioning scripts:
 
     sudo /edx/bin/update edx-platform release    
