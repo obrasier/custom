@@ -2,10 +2,14 @@ Add the following lines to /edx/app/edx_ansible/server-vars.yml
 
 cd /edx/app/edx_ansible
 
-    edxapp_use_custom_theme: true
-    edxapp_theme_name: 'cloudgenius'
-    edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
-    edxapp_theme_version: 'HEAD'
+```yml
+cat server-vars.yml 
+
+edxapp_use_custom_theme: true
+edxapp_theme_name: 'cloudgenius'
+edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
+edxapp_theme_version: 'HEAD'
+```
 
 Make sure to keep file permissions for server-vars.yml assigned to edx-ansible:edx-ansible
 
