@@ -11,6 +11,8 @@ edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
 edxapp_theme_version: 'HEAD'
 ```
 
+	sudo chown edx-ansible:edx-ansible server-vars.yml 
+
 Make sure to keep file permissions for server-vars.yml assigned to edx-ansible:edx-ansible
 
 	sudo chmod edx-ansible:edx-ansible /edx/app/edx_ansible/server-vars.yml
