@@ -35,14 +35,20 @@ Re-run the provisioning scripts:
 read more https://github.com/edx/edx-platform/wiki/Stanford-Theming 
 
 
+
+If you use a custom theme like cloudgenius, you will need to copy the static_templates directory like this:
+
+sudo cp /edx/app/edxapp/edx-platform/lms/templates/static_templates /edx/app/edxapp/themes/cloudgenius/templates
+
+THEN, you will need to append "theme-" to the name of every file within the static_templates directory like this:
+
+sudo mv about.html theme-about.html
+
+This should resolve the "THERE HAS BEEN A 500 ERROR ON THE XXX SERVERS" error on the navigation links.
+
+
 Overview
 ========
-This directory stores a default theme for an Open edX instance.
-
-We've organized the tree to mimic the directory structure of the edX
-codebase so that it's easy to tell where the files will end up upon
-deploy. We'll use a special settings file to set the template and
-staticfiles paths properly to point to these files.
 
 ![Alt text](/default_theme_screenshot.jpg?raw=true "Open edX Default Theme Screenshot")
 
@@ -54,10 +60,3 @@ To customize your theme:
 - Upload your own image assets.
 - Edit the .scss file in static/sass/ and rename the file with your theme's name.
 - Edit the lms.envs.json file in edx-platform and set 'USE_CUSTOM_THEME' to true, and 'THEME_NAME' to your theme's name.
-
-
-License
-=======
-
-The code in this repo is licensed under the Apache 2.0 License.
-See [LICENSE.txt](LICENSE.txt) for more info.
