@@ -9,6 +9,10 @@ edxapp_use_custom_theme: true
 edxapp_theme_name: 'cloudgenius'
 edxapp_theme_source_repo: 'https://github.com/beacloudgenius/cloudgenius.git'
 edxapp_theme_version: 'HEAD'
+#If the repository is private also add
+edxapp_git_identity: '/edx/app/edxapp/tmp_id_rsa'
+EDXAPP_LOCAL_GIT_IDENTITY: '/edx/app/edxapp/.ssh/id_rsa'
+EDXAPP_USE_GIT_IDENTITY: true
 ```
 
 	sudo chown edx-ansible:edx-ansible server-vars.yml 
