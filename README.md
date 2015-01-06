@@ -34,10 +34,11 @@ To compile javascript and css outside of the update script run the following com
 
 Re-run the provisioning scripts:
 
-    sudo /edx/bin/update edx-platform release    
-
+```
+sudo /edx/bin/update edx-platform release    
+```
 read more https://github.com/edx/edx-platform/wiki/Stanford-Theming 
-
+and https://github.com/IONISx/edx-theme
 
 
 If you use a custom theme like cloudgenius, you will need to copy the static_templates directory like this:
