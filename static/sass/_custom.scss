@@ -1,7 +1,7 @@
 /****************************************************************************************************
-*   Stanford Theming File
+*   Madmaker Theming File
 *
-*   Contains all the theme color definitions for the Stanford Open Source MOOC Project
+*   Contains all the theme color definitions for the MadMaker STEM outreach course. Adapted from Stanford theming file - Stanford Open Source MOOC Project
 *
 ****************************************************************************************************/
 
@@ -10,18 +10,18 @@
 //-----------------
 
 //Main Color Variables
-$main-color: #00AFF0;
-$dark-color: #f04100; //Link Color
-$light-color: #000000; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$bg-color: #ebf4fa; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
+$main-color:  #1f49c8;  //Main Blue color theme	
+$dark-color: darken(#32c5aa,5%); //Link and Hover color
+$light-color: #dbe2e3; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
+$bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Main BG Color Variables
-$main-bg: #00AFF0;
+$main-bg: #4367a7; // less saturated than main color
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%); 
 
 //Secondary Color Variables
-$secondary: #ebf4fa;
+$secondary: #a4b7b0;
 $secondary-50: lighten($secondary, 9%);
 $secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
 
@@ -81,7 +81,7 @@ $base-font-color: $black;
 $lighter-base-font-color: $black-80;
 $very-light-text: $gray-1;
 
-$link-color: $dark-color;
+$link-color: $main-color;
 $link-color-d1: $dark-color;
 $link-hover: $light-color;
 $site-status-color: $bg-color;
@@ -137,7 +137,7 @@ $action-secondary-focused-fg: $gray;
 $action-secondary-active-bg: $secondary-50;
 $action-secondary-active-fg: $gray;
 $action-secondary-active-shadow: none;
-$action-secondary-active-focused-fg: $gray-75;
+$action-secondary-active-focused-fg: $gray-2;
 $action-secondary-active-focused-shadow: none;
 
 // disabled
@@ -185,12 +185,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: url('https://raw.githubusercontent.com/beacloudgenius/cloudgenius/master/static/images/sunrise.jpg');
+$homepage-bg-image: url('../themes/madmaker/images/Girl.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: 'https://raw.githubusercontent.com/beacloudgenius/cloudgenius/master/static/images/edx.png';
+$video-thumb-url: '../themes/madmaker/images/edx.png';
 
 //-----------------
 //  Mixin Styles
@@ -206,8 +206,125 @@ $video-thumb-url: 'https://raw.githubusercontent.com/beacloudgenius/cloudgenius/
     margin: 0 !important;
     text-align: right;
 }
-
-.wrapper-footer footer .colophon .nav-colophon li{
-	float: left;
-	margin-right:15px;
+//-------------------
+// Footer Styling
+//------------------
+.disclaimer {
+	margin: 20pt;
+	text-align: center;
+	line-height: 1.5;
+	font-style: italic;
+	font-family: "Times New Roman";
+	margin-left: 100px;
+	margin-right: 100px;
 }
+
+.sponsors {
+	margin-top:10pt;
+}
+
+.wrapper-footer footer {
+	box-sizing: border-box;
+	max-width: 1180px;
+	min-width: 760px;
+	width: 100%;
+	margin: 0 auto;
+	.colophon {
+
+		margin-right:2.35765%;
+		width: 65.88078%;
+		float: left;	
+		.nav-colophon{ 
+			margin: 5px 0;
+	
+			li{
+				float: left;
+				margin-right: 15px;
+				a{
+					color: $gray-75;
+					&:hover {
+						color:$main-color;
+					}
+				}
+			 }
+		}
+	}
+}
+//-----------------
+//Header Styles
+//----------------
+.home>header {
+
+	//overflow: visible	!important;
+	.outer-wrapper{
+		padding: 200px 10px 	!important;
+	//	overflow: visible;
+	}
+
+	.title{
+		text-transform: none	!important;
+		background: rgba(251,251,251,0.9)	!important;
+	}
+}
+
+header.global{
+	background: rgba(0,54,231,0.9)	 !important;
+	h2 {
+		color: #fff 		!important;
+	}
+	.nav-global li a{ //register now
+		display:block		 !important;
+		padding: 5px		 !important;
+		color: $gray-2		 !important;
+		&:hover {
+			color:#e3e3e3	 !important;
+			font-weight: 600 !important;
+		}
+		
+	background-position: center top 	!important;
+	}
+	.slim {
+		background: $main-color 	!important;
+		h2 span{ // weird course header shadow
+			color: #fff		 !important;
+			text-shadow:none	 !important;
+		}
+	}
+	.nav-courseware li .cta{
+		background: $gray-2	 !important;
+		color: $main-color	 !important;
+		font-weight: 600	 !important;
+		&:hover {
+			color:#fff	 !important;
+			background: $dark-color !important;	
+		}
+	}
+}
+
+.provider{
+	text-shadow: none 		!important;
+	color: #fff			!important;
+}
+// Header sign-in button
+//header.global .nav-courseware li .cta, header.global .nav-courseware div .cta, .view-partial-mktgregister .action.action-register, .view-partial-mktgregister .action.access-courseware{
+//	background: #efefef;
+//	color: $main-color;
+//	font-weight: 600;
+//}
+//.view-howitworks .nav-global-01 a, .view-courses .nav-global-02 a, .view-schools .nav-global-03 a, .view-register .nav-global-04 a {
+//	color: $light-color;
+//}
+//header.global .nav-courseware li .cta:hover {
+//    color: #fff;
+//}
+//header.global .nav-global li a:active, .nav-global div a:active {
+//    text-decoration: none;
+//    color: #fff;
+//}
+//.view-howitworks .nav-global-01 a, .view-courses .nav-global-02 a, .view-schools .nav-global-03 a, .view-register .nav-global-04 a {
+//    text-decoration: none;
+//    color: #fff !important;
+//}
+//header.global .nav-global li a:hover{
+//    color: #e8e8e8;
+//}
