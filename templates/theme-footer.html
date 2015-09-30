@@ -3,19 +3,32 @@
 <%namespace name='static' file='/static_content.html'/>
 <%! from datetime import datetime %>
 <%! from pytz import UTC %>
-
 <div class="wrapper-footer">
   <footer>
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
-          <li>You may not access this site without formal admission.</li>
-          <li>© 2011-2014 <a href="//be.a.cloudgeni.us/" target="_blank">Cloud Genius</a>®</li>
+          <li><a href="${reverse('tos')}">Terms of Service</a></li>
+          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
+          <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
+  	  <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+          <!--<li><a href="${reverse('about')}#careers">Careers</a></li>-->
+          <li><a href="${reverse('about')}#contact">Contact</a></li>
+          <li><a href="${marketing_link('FAQ')}">Help</a></li>
         </ol>
       </nav>
     </div>
     <div class="references">
-      <span><a href="//be.a.cloudgeni.us" target="_blank"><img style="width: 25px; height: 25px; vertical-align: middle;" src="https://raw.githubusercontent.com/beacloudgenius/cloudgenius/master/static/images/logo%20100x100.png" alt="" /></a></span>
+      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+    </div>
+    <div class="disclaimer">
+	The MadMaker Embedded System Design Challenge is partially funded by the Australian Government Department of Education and Training through the Australian Maths and Science Partnerships Program.
+
+		<div class="sponsors">
+
+			<img src="${static.url('themes/madmaker/images/UniSydney.png')}" height="80"/> 
+
+		</div>
     </div>
   </footer>
 </div>
