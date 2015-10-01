@@ -329,25 +329,25 @@ h3 {
 // Custom Class Code Help Pop Up
 // ------------
 .cc-hideDisplay{
-	position: relative;
-	z-index:20;
-	color: green;
-	text-decoration: none;
+	position: relative 	!important;
+	z-index:20 	!important;
+	color: green 	!important;
+	text-decoration: none 	!important;
 }
 .cc-hideDisplay:hover{
-	z-index: 30;
+	z-index: 30 	!important;
 }
 .cc-hideDisplay span.cc-showDisplayOnHover{
-	display: none;
+	display: none 	!important;
 }
 .cc-hideDisplay:hover span.cc-showDisplayOnHover{
-	display: block;
-	position: absolute;
-	font-size: 18px;
+	display: block 	!important;
+	position: absolute 	!important;
+	font-size: 18px 	!important;
 
-	line-height: 25px;
+	line-height: 25px 	!important;
 
-	top: 5px;
+	top: 5px 	!important;
 	left:20px;
 	
 	width: auto;
