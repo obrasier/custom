@@ -255,16 +255,22 @@ $video-thumb-url: '../themes/madmaker/images/edx.png';
 //----------------
 .home>header {
 
-	//overflow: visible	!important;
+	background-position: center top 	!important;
+	overflow: visible	!important;
 	.outer-wrapper{
 		padding: 200px 10px 	!important;
-	//	overflow: visible;
+		overflow: visible;
 	}
 
 	.title{
 		text-transform: none	!important;
 		background: rgba(251,251,251,0.9)	!important;
+		hgroup h2{
+		text-transform: none !important;
+		}
 	}
+
+
 }
 
 header.global{
@@ -281,7 +287,7 @@ header.global{
 			font-weight: 600 !important;
 		}
 		
-	background-position: center top 	!important;
+	
 	}
 	.slim {
 		background: $main-color 	!important;
@@ -305,6 +311,17 @@ header.global{
 	text-shadow: none 		!important;
 	color: #fff			!important;
 }
+
+// --------------
+// Header 3 Style
+// --------------
+h3 {
+    letter-spacing: 1px 	!important;
+    margin-bottom: 1px 		!important;
+    margin-top: 12px 		!important;
+    text-transform: capitalize	!important;
+}
+
 // Header sign-in button
 //header.global .nav-courseware li .cta, header.global .nav-courseware div .cta, .view-partial-mktgregister .action.action-register, .view-partial-mktgregister .action.access-courseware{
 //	background: #efefef;
