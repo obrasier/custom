@@ -323,6 +323,48 @@ h3 {
     text-transform: capitalize	!important;
 }
 
+// ------------
+// Custom Class Code Help Pop Up
+// ------------
+.cc-hideDisplay{
+	position: relative;
+	z-index:20;
+	color: green;
+	text-decoration: none;
+}
+.cc-hideDisplay:hover{
+	z-index: 30;
+}
+.cc-hideDisplay span.cc-showDisplayOnHover{
+	display: none;
+}
+.cc-hideDisplay:hover span.cc-showDisplayOnHover{
+	display: block;
+	position: absolute;
+	font-size: 18px;
+
+	line-height: 25px;
+
+	top: 5px;
+	left:20px;
+	
+	width: auto;
+	padding: 10px;
+
+	border: 1px solid #666;
+	background-color: #c0cedd;
+
+	color: #000;
+	text-align: left;
+
+}
+span.cc-showBodyOfDisplayOnHover{
+	font-size: 16px;
+	font-weight: normal;
+	color: #444;
+	line-height: 18px;
+}
+
 // Header sign-in button
 //header.global .nav-courseware li .cta, header.global .nav-courseware div .cta, .view-partial-mktgregister .action.action-register, .view-partial-mktgregister .action.access-courseware{
 //	background: #efefef;
