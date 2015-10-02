@@ -222,7 +222,10 @@ $video-thumb-url: '../themes/custom/images/edx.png';
 .sponsors {
 	margin-top:10pt;
 	font-style: normal;
-	font-family: "Arial";
+	font-family: inherit;
+	text-transform: uppercase;
+	font-size: smaller;
+	line-height: 2;
 }
 
 .wrapper-footer footer {
